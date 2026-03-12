@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalhes do Serviço — MARCARGA Limitada</title>
+  <link href="./output.css" rel="stylesheet">
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="font-mont bg-white overflow-x-hidden">
+
+<!-- NAVBAR -->
+<header id="navbar" class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+  <div class="max-w-7xl mx-auto px-6 h-[70px] flex items-center justify-between relative">
+    <a href="./index.html" class="flex items-center gap-1.5 shrink-0 no-underline w-28 h-28">
+      <img src="./assets/image/logo.png" alt="MARCARGA Logo" class="w-28 h-auto">
+    </a>
+    <nav id="desktop-nav" class="hidden md:flex items-center gap-8">
+      <a href="./sobre-nos.html" class="nav-item text-[13px] font-bold uppercase tracking-wider text-navy hover:text-gold transition-colors">Sobre Nos</a>
+      <div class="relative group">
+        <button class="flex items-center nav-item gap-1 text-[13px] font-bold uppercase tracking-wider text-navy hover:text-gold transition-colors">
+          Agenciamento de Navios
+          <svg class="w-4 h-4 mt-[1px] transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Entrada de Navios</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Saida de Navios</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Logistica Portuaria</a>
+        </div>
+      </div>
+      <div class="relative group">
+        <button class="flex items-center nav-item gap-1 text-[13px] font-bold uppercase tracking-wider text-navy hover:text-gold transition-colors">
+          Servicos ao Armador
+          <svg class="w-4 h-4 mt-[1px] transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Gestao de Tripulacao</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Aprovisionamento</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Assistencia Tecnica</a>
+        </div>
+      </div>
+      <div class="relative group">
+        <button class="flex items-center nav-item gap-1 text-[13px] font-bold uppercase tracking-wider text-navy hover:text-gold transition-colors">
+          Certificacoes
+          <svg class="w-4 h-4 mt-[1px] transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">ISO 9001</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">ISM Code</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">ISPS Code</a>
+        </div>
+      </div>
+      <a href="#" class="nav-item text-[13px] font-bold uppercase tracking-wider text-navy hover:text-gold transition-colors">Contactos</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#" class="text-navy hover:text-gold transition-colors">
+          <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" class="text-navy hover:text-gold transition-colors">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+      <button onclick="toggleMenu()" class="md:hidden text-navy" id="ham-icon">
+        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <div id="mob-menu" class="hidden md:hidden absolute top-[70px] left-0 right-0 bg-navy/95 backdrop-blur-sm flex-col gap-4 px-6 py-6 z-50">
+      <a href="./sobre-nos.html" class="nav-item text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">Sobre Nos</a>
+      <a href="#" class="nav-item text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">Agenciamento de Navios</a>
+      <a href="#" class="nav-item text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">Servicos ao Armador</a>
+      <a href="#" class="nav-item text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">Certificacoes</a>
+      <a href="#" class="nav-item text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">Contactos</a>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════
+     PAGE HERO — split: light left / image right
+══════════════════════════════════════════════ -->
+<!-- PAGE HERO -->
+<section class="relative mt-[70px] py-24 px-6 text-center overflow-hidden bg-navy">
+  <div class="absolute inset-0 bg-cover bg-center opacity-40" style="background-image:url('./assets/image/bgsuporte.png')"></div>
+  <div class="relative z-10">
+    <span class="inline-block text-[11px] font-bold tracking-[.14em] uppercase text-gold mb-3">Detalhes</span>
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight">Detalhes do Serviço</h1>
+    
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     ARTICLE BODY
+══════════════════════════════════════════════ -->
+<section class="max-w-4xl mx-auto px-6 py-16">
+
+  <!-- Headline + intro -->
+  <div class="fade-up mb-8">
+    <h2 class="text-[clamp(1.6rem,3vw,2.4rem)] font-black text-navy leading-snug mb-6">
+      Agenciamento de navios com excelencia operacional nos portos angolanos
+    </h2>
+    <p class="text-sm text-gray-500 leading-relaxed mb-4">
+      No mundo competitivo do transporte maritimo, manter-se organizado, informado e em controlo e fundamental para o sucesso. A MARCARGA foi criada para simplificar as operacoes de agenciamento e elevar a sua eficiencia a novos patamares em todos os portos de Angola.
+    </p>
+    <p class="text-sm text-gray-500 leading-relaxed">
+      A nossa plataforma de servicos oferece uma interface intuitiva e acessivel, facilitando a comunicacao entre armadores, agentes e autoridades portuarias. Com processos claros e transparentes, cada escala e gerida com maxima eficiencia e seguranca.
+    </p>
+  </div>
+
+  <!-- Feature list -->
+  <div class="fade-up mb-10 space-y-5">
+
+    <div class="border-l-4 border-brand pl-5">
+      <h3 class="text-[14px] font-extrabold text-navy mb-1">1. Interface de Gestao Centralizada</h3>
+      <p class="text-sm text-gray-500 leading-relaxed">Acesso a todas as informacoes operacionais em tempo real: documentacao, cronogramas, contactos e historico de escalas numa plataforma unificada.</p>
+    </div>
+
+    <div class="border-l-4 border-brand pl-5">
+      <h3 class="text-[14px] font-extrabold text-navy mb-1">2. Painel de Acompanhamento em Tempo Real</h3>
+      <p class="text-sm text-gray-500 leading-relaxed">Monitorize o progresso das operacoes com o nosso painel abrangente, fornecendo informacoes em tempo real sobre metricas criticas, cronogramas e riscos operacionais.</p>
+    </div>
+
+    <div class="border-l-4 border-brand pl-5">
+      <h3 class="text-[14px] font-extrabold text-navy mb-1">3. Ferramentas de Planeamento e Previsao</h3>
+      <p class="text-sm text-gray-500 leading-relaxed">Tome o controlo das suas operacoes com ferramentas de planeamento avancadas. Analise dados historicos e projete cenarios futuros para decisoes mais acertadas.</p>
+    </div>
+
+    <div class="border-l-4 border-brand pl-5">
+      <h3 class="text-[14px] font-extrabold text-navy mb-1">4. Colaboracao e Comunicacao</h3>
+      <p class="text-sm text-gray-500 leading-relaxed">Facilite a comunicacao perfeita entre as equipas operacionais. Partilhe documentos, actualizacoes e informacoes criticas numa plataforma centralizada.</p>
+    </div>
+
+    <div class="border-l-4 border-brand pl-5">
+      <h3 class="text-[14px] font-extrabold text-navy mb-1">5. Relatorios e Conformidade</h3>
+      <p class="text-sm text-gray-500 leading-relaxed">Gere relatorios detalhados e personalizados adaptados as necessidades especificas de cada escala. Apresente dados de forma clara para comunicacao eficaz com todas as partes.</p>
+    </div>
+
+  </div>
+
+  <!-- Main featured image -->
+  <div class="fade-up mb-8 rounded-2xl overflow-hidden aspect-[16/9]">
+    <img
+      src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1200&q=80"
+      alt="Operacao Portuaria"
+      class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+  </div>
+
+  <!-- Closing paragraph -->
+  <div class="fade-up mb-12">
+    <p class="text-sm text-gray-500 leading-relaxed mb-4">
+      Em conclusao, os nossos servicos de agenciamento sao um diferencial para os armadores que operam no mercado angolano. Com uma equipa robusta, interface profissional e foco total na eficiencia, capacitamo-lo a tomar o controlo das suas operacoes e alcancar o sucesso.
+    </p>
+    <p class="text-sm text-gray-500 leading-relaxed">
+      Pronto para revolucionar a sua abordagem ao agenciamento maritimo? Contacte-nos hoje e experiencie o futuro da gestao operacional portuaria.
+    </p>
+  </div>
+
+  <!-- Image gallery: 2 columns -->
+  <div class="fade-up grid grid-cols-1 sm:grid-cols-2 gap-[3px] rounded-2xl overflow-hidden mb-12">
+    <div class="aspect-[4/3] overflow-hidden group">
+      <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=700&q=80"
+           alt="Operacao 1"
+           class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+    </div>
+    <div class="aspect-[4/3] overflow-hidden group">
+      <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=700&q=80"
+           alt="Operacao 2"
+           class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- ══════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════ -->
+<!-- FOOTER -->
+<footer class="relative text-white py-16">
+  <div class="absolute inset-0 bg-cover bg-center -z-10" style="background-image:url('./assets/image/bg-footer.png')"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10 text-center md:text-left">
+      <div>
+        <div class="flex items-center gap-2 mb-4 justify-center md:justify-start">
+          <div class="w-10 h-10 bg-gold rounded flex items-center justify-center">
+            <div class="grid grid-cols-2 gap-0.5 p-1">
+              <div class="w-2 h-2 bg-white rounded-sm"></div>
+              <div class="w-2 h-2 bg-white rounded-sm"></div>
+              <div class="w-2 h-2 bg-white rounded-sm"></div>
+              <div class="w-2 h-2 bg-white rounded-sm"></div>
+            </div>
+          </div>
+          <div>
+            <div class="font-heading font-bold">MARCARGA</div>
+            <div class="text-white/50 text-xs">LIMITADA</div>
+          </div>
+        </div>
+        <p class="text-white/50 text-xs leading-relaxed">Simply dummy text of the printing and typesetting industry standard dummy text ever since the 1500s, when an unknown printer took.</p>
+      </div>
+      <div>
+        <h4 class="font-heading font-bold text-gold mb-4 uppercase tracking-wider text-sm">Links Rápidos</h4>
+        <ul class="space-y-2 text-white/60 text-sm">
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-heading font-bold text-gold mb-4 uppercase tracking-wider text-sm">Serviços</h4>
+        <ul class="space-y-2 text-white/60 text-sm">
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-heading font-bold text-gold mb-4 uppercase tracking-wider text-sm">Contacte-nos</h4>
+        <ul class="space-y-2 text-white/60 text-sm">
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-6 flex flex-col items-center md:flex-row md:justify-between gap-2 text-white/40 text-xs text-center">
+      <span>2025 - MARCARGA Angola Todos os Direitos Reservados</span>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-gold transition-colors">Privacidade</a>
+        <a href="#" class="hover:text-gold transition-colors">Termos de Uso</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="./js/script.js"></script>
+
+
+</body>
+</html>

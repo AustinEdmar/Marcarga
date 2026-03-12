@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maessa Angola</title>
+  <link href="./output.css" rel="stylesheet">
+
+  <link rel="icon" href="./assets/image/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <script src="./js/gsap.min.js"></script>
+  <script src="./js/ScrollTrigger.min.js"></script>
+
+</head>
+<body class="font-mont bg-white overflow-x-hidden scroll-smooth">
+
+<!-- ══════════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════════ -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-6 h-[70px] flex items-center justify-between relative">
+
+    <a href="index.html" class="flex items-center gap-1.5 shrink-0 no-underline w-28 h-28">
+      <img src="./assets/image/logo.png" id="logo-main" alt="Maessa Logo" class="w-28 h-auto">
+    </a>
+
+    <!-- Desktop nav links -->
+    <nav id="desktop-nav" class="hidden md:flex items-center gap-8">
+      <a href="./about.html" class="nav-item text-[13px] font-bold uppercase tracking-wider text-white  pb-0.5 hover:text-gold transition-colors">Sobre Nos</a>
+
+      <div class="relative group">
+        <button class="flex items-center nav-item gap-1 text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">
+          Agenciamento de Navios
+          <svg class="w-4 h-4 mt-[1px] transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Entrada de Navios</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Saída de Navios</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Logística Portuária</a>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <button class="flex items-center nav-item gap-1 text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">
+          Serviços ao Armador
+          <svg class="w-4 h-4 mt-[1px] transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Entrada de Navios</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Saída de Navios</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Logística Portuária</a>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <button class="flex items-center nav-item gap-1 text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">
+          Certificações
+          <svg class="w-4 h-4 mt-[1px] transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Entrada de Navios</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Saída de Navios</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Logística Portuária</a>
+        </div>
+      </div>
+
+      <a href="./Contacts.html" class="nav-item text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">Contactos</a>
+    </nav>
+
+    <!-- Social + hamburger -->
+    <div class="flex items-center gap-4">
+      <div id="desktop-soc" class="hidden md:flex items-center gap-4">
+        <a href="#" id="soc1" class="soc-link text-white hover:text-gold transition-colors">
+          <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" id="soc2" class="soc-link text-white hover:text-gold transition-colors">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+      <button onclick="toggleMenu()" class="md:hidden text-white" id="ham-icon">
+        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mob-menu" class="hidden md:hidden absolute top-[70px] left-0 right-0 bg-navy/95 backdrop-blur-sm flex-col gap-4 px-6 py-6 z-50">
+      <a href="#" class="nav-item text-[13px] font-bold uppercase tracking-wider text-white border-b-2 border-gold pb-0.5 hover:text-gold transition-colors">Sobre Nos</a>
+
+      <div class="relative group">
+        <button class="flex items-center nav-item gap-1 text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">
+          Agenciamento de Navios
+          <svg class="w-4 h-4 mt-[1px] transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Entrada de Navios</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Saída de Navios</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Logística Portuária</a>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <button class="flex items-center nav-item gap-1 text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">
+          Serviços ao Armador
+          <svg class="w-4 h-4 mt-[1px] transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Entrada de Navios</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Saída de Navios</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Logística Portuária</a>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <button class="flex items-center nav-item gap-1 text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">
+          Certificações
+          <svg class="w-4 h-4 mt-[1px] transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Entrada de Navios</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Saída de Navios</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Logística Portuária</a>
+        </div>
+      </div>
+
+      <a href="./Contact.html" class="nav-item text-[13px] font-bold uppercase tracking-wider text-white pb-0.5 hover:text-gold transition-colors">Contactos</a>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════ -->
+<section id="hero" class="relative w-full h-screen min-h-[560px] flex items-center overflow-hidden">
+
+  <!-- VIDEO CAROUSEL -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div id="video-carousel" class="relative w-full h-full">
+
+      <!-- VIDEO 1 -->
+      <div class="video-slide absolute inset-0 opacity-0 transition-opacity duration-[1500ms] ease-in-out">
+        <video class="carousel-video w-full h-full object-cover transition-transform duration-[10000ms] ease-in-out scale-100" muted playsinline preload="auto">
+          <source src="./assets/videos/video1.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- VIDEO 2 -->
+      <div class="video-slide absolute inset-0 opacity-0 transition-opacity duration-[1500ms] ease-in-out">
+        <video class="carousel-video w-full h-full object-cover transition-transform duration-[10000ms] ease-in-out scale-100" muted playsinline preload="auto">
+          <source src="./assets/videos/video2.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- VIDEO 3 -->
+      <div class="video-slide absolute inset-0 opacity-0 transition-opacity duration-[1500ms] ease-in-out">
+        <video class="carousel-video w-full h-full object-cover transition-transform duration-[10000ms] ease-in-out scale-100" muted playsinline preload="auto">
+          <source src="./assets/videos/video3.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </div>
+
+    <!-- Overlay — gradient via arbitrary value -->
+    <div class="absolute inset-0 z-[5] [background:linear-gradient(160deg,rgba(18,18,140,0.55)_0%,rgba(25,25,160,0.40)_50%,rgba(8,8,70,0.65)_100%)]"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 w-full max-w-7xl mx-auto px-6 flex flex-col justify-center h-full pt-[70px]">
+
+    <div class="flex items-end justify-center gap-6">
+      <div class="flex flex-col gap-4">
+
+        <!-- Play Button -->
+        <div id="play-btn" class="shrink-0">
+          <button class="w-20 h-20 md:w-[90px] md:h-[90px] rounded-full bg-white/20 border-[3px] border-white/65 flex items-center justify-center cursor-pointer hover:bg-white/35 transition-all duration-200 hover:scale-105 active:scale-95">
+            <svg class="w-7 h-7 md:w-8 md:h-8 fill-white ml-1" viewBox="0 0 24 24">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- H1 -->
+        <h1 class="text-[18vw] max-md:text-[22vw] font-extrabold uppercase text-white leading-[0.85] [-webkit-letter-spacing:-8px] [letter-spacing:-8px]">
+          MAESSA
+        </h1>
+
+        <!-- Subtitle -->
+        <div id="htitle1" class="text-white font-black pl-16  uppercase leading-[0.93] tracking-tight text-[clamp(0.8rem,1vw,2rem)]">
+          LOGISTICAS&nbsp;&nbsp;& TRANSITARIOS
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Saiba Mais btn -->
+    <div id="saiba-wrap" class="mt-10 flex justify-center">
+      <a href="./about.html" class="inline-flex items-center gap-2.5 bg-gold text-black font-bold text-[13px] tracking-wide px-5 py-3 rounded-full hover:opacity-90 transition-all hover:-translate-y-0.5 active:scale-95">
+        Saiba Mais
+        <span class="w-7 h-7 bg-white/90 rounded-full flex items-center justify-center shrink-0">
+          <svg class="w-3 h-3" fill="none" stroke="black" stroke-width="3" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <a href="#parceiros" 
+   class="absolute right-6 top-1/2 -translate-y-1/2 z-10 hidden md:block cursor-pointer">
+    
+    <div class="relative w-6 h-11 border-2 border-white/75 rounded-xl overflow-hidden">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+                w-[5px] h-[10px] bg-white rounded-full animate-bounce"></div>
+</div>
+
+</a>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     PARCEIROS
+══════════════════════════════════════════════ -->
+<section id="parceiros" class="relative bg-[#eef0f7] py-16 px-6 overflow-hidden">
+
+    <!-- Background image via arbitrary value --> 
+ <div 
+  class="absolute inset-0 pointer-events-none bg-cover bg-center"
+  style="background-image: url('./assets/image/bg-parceiro.png');">
+</div>
+  <!-- Decorative diamonds -->
+  <div class="absolute -right-16 -top-16 w-72 h-72 border-[50px] border-[#b4bcd8]/15 rounded-2xl rotate-[35deg] pointer-events-none"></div>
+  <div class="absolute right-10 -bottom-24 w-56 h-56 border-[42px] border-[#b4bcd8]/12 rounded-2xl rotate-[35deg] pointer-events-none"></div>
+
+  <div class="relative z-10 max-w-5xl mx-auto">
+    <p id="p-title" class="text-center font-extrabold text-lg text-gray-900 mb-12">
+      Nossos Parceiros
+    </p>
+
+    <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16">
+
+      <div class="p-logo flex items-center gap-2.5 opacity-80 hover:opacity-100 hover:-translate-y-1 transition-all duration-200 cursor-default">
+        <div class="w-11 h-11 rounded-full bg-[#e8a000] flex items-center justify-center text-white font-black text-xl shrink-0">S</div>
+        <span class="text-xl font-extrabold text-gray-900">Sonangol</span>
+      </div>
+
+      <div class="p-logo flex items-center opacity-80 hover:opacity-100 hover:-translate-y-1 transition-all duration-200 cursor-default">
+        <span class="text-[1.65rem] font-black text-[#e63946]">G</span>
+        <span class="text-[1.65rem] font-black text-gray-900 tracking-tight">UNITEL</span>
+      </div>
+
+      <div class="p-logo flex items-center gap-3 opacity-80 hover:opacity-100 hover:-translate-y-1 transition-all duration-200 cursor-default">
+        <svg width="42" height="34" viewBox="0 0 42 34" fill="none">
+          <polygon points="0,0 21,17 0,34" fill="#e63946"/>
+          <polygon points="21,0 42,17 21,34" fill="#003087"/>
+        </svg>
+        <span class="text-xl font-extrabold text-gray-900">Chevron</span>
+      </div>
+
+      <div class="p-logo flex items-center opacity-80 hover:opacity-100 hover:-translate-y-1 transition-all duration-200 cursor-default">
+        <span class="text-[1.7rem] font-black text-[#b5006a] tracking-tight">afric</span>
+        <span class="text-[1.7rem] font-black text-gray-800">ell</span>
+        <span class="text-[2rem] font-black text-[#b5006a] leading-none -mt-1">●</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SUPORTE CTA
+══════════════════════════════════════════════ -->
+<section id="cta-sec" class="relative bg-cta overflow-hidden py-16 sm:py-20 md:py-28 px-6">
+
+  <!-- Background image via arbitrary value --> 
+ <div 
+  class="absolute inset-0 pointer-events-none bg-cover bg-center"
+  style="background-image: url('./assets/image/bgsuporte.png');">
+</div>
+
+  <!-- Glow orbs -->
+  <div class="absolute -left-40 -top-40 w-[300px] sm:w-[400px] md:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] rounded-full bg-white/[0.03] pointer-events-none"></div>
+  <div class="absolute -right-20 -bottom-40 w-[250px] sm:w-[350px] md:w-[420px] h-[250px] sm:h-[350px] md:h-[420px] rounded-full bg-white/[0.04] pointer-events-none"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16">
+
+    <div id="cta-l" class="text-center md:text-left">
+      <h2 class="text-white font-extrabold text-[clamp(2rem,6vw,4rem)] leading-[1.1]">
+        Precisa de <br class="hidden sm:block"> suporte ?
+      </h2>
+    </div>
+
+    <div id="cta-r" class="flex flex-col gap-6 max-w-lg w-full items-center md:items-start text-center md:text-left">
+      <p class="text-white/85 text-[clamp(1rem,2.5vw,1.1rem)] leading-relaxed font-medium">
+        Pensando em si, criámos a nossa linha de apoio para melhor o servir
+      </p>
+      <a href="#" class="inline-flex items-center gap-4 bg-gold text-black font-extrabold text-[clamp(0.95rem,2.5vw,1.1rem)] px-7 sm:px-9 py-4 sm:py-5 rounded-2xl hover:opacity-90 hover:-translate-y-0.5 transition-all duration-200 active:scale-95">
+        Contacte – nos
+        <span class="w-8 h-8 sm:w-9 sm:h-9 bg-white/30 rounded-full flex items-center justify-center shrink-0">
+          <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24">
+            <line x1="22" y1="2" x2="11" y2="13"/>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO MODAL -->
+<div id="video-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500 z-[999]">
+  <div class="relative w-[90%] md:w-[70%] max-w-4xl">
+    <button id="close-video" class="absolute -top-12 right-0 text-white text-3xl font-bold hover:text-gold transition">✕</button>
+    <video id="modal-video" class="w-full rounded-xl shadow-2xl" controls>
+      <source src="./assets/videos/video3.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════ -->
+<footer id="footer-sec" class="bg-white border-t border-gray-100 pt-8 pb-8 px-6">
+  <div class="max-w-5xl mx-auto flex flex-col items-center">
+
+    <div class="w-full flex flex-col items-center gap-8 md:grid md:grid-cols-3 md:items-center md:gap-10">
+
+      <!-- Brand -->
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <a href="#" class="flex items-center gap-2.5 mb-4">
+          <img src="./assets/image/logo-black.png" alt="Maessa Logo" class="w-32 md:w-36">
+        </a>
+        <p class="text-[13px] text-gray-400 leading-relaxed max-w-[260px]">
+          Larana randomised words which don't look even slightly thjffhj.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div class="flex flex-col items-center text-center">
+        <nav class="flex flex-col gap-2 md:gap-2">
+          <a href="#" class="text-[12.5px] font-bold uppercase tracking-widest text-gray-800 hover:text-brand transition-colors">Sobre Nós</a>
+          <a href="#" class="text-[12.5px] font-bold uppercase tracking-widest text-gray-800 hover:text-brand transition-colors">Serviços</a>
+          <a href="#" class="text-[12.5px] font-bold uppercase tracking-widest text-gray-800 hover:text-brand transition-colors">Projectos</a>
+          <a href="#" class="text-[12.5px] font-bold uppercase tracking-widest text-gray-800 hover:text-brand transition-colors">Blogs</a>
+          <a href="#" class="text-[12.5px] font-bold uppercase tracking-widest text-gray-800 hover:text-brand transition-colors">Contactos</a>
+        </nav>
+      </div>
+
+      <!-- Social -->
+      <div class="flex justify-center md:justify-end">
+        <div class="flex items-center gap-3 flex-wrap justify-center">
+          <a href="#" class="w-9 h-9 rounded-lg bg-navy flex items-center justify-center text-white hover:bg-brand transition">
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-lg bg-navy flex items-center justify-center text-white hover:bg-sky-500 transition">
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 12 8v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-lg bg-[#c2185b] flex items-center justify-center text-white hover:opacity-85 transition">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg>
+          </a>
+          <a href="#" class="w-9 h-9 rounded-lg bg-[#0077b5] flex items-center justify-center text-white hover:opacity-85 transition">
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-10 pt-5 border-t border-gray-100 flex flex-col items-center gap-2 text-center md:flex-row md:justify-between md:gap-3 w-full">
+      <span class="text-[13px] text-gray-400">© 2025 Maessa, Todos os Direitos Reservados</span>
+      <span class="text-[13px] text-gray-400">Feito por Maessa</span>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════════════ -->
+<script src="./js/script.js"></script>
+
+</body>
+</html>

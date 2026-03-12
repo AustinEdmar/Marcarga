@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Nós — MARCARGA Limitada</title>
+  <link href="./output.css" rel="stylesheet">
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="font-mont bg-white overflow-x-hidden">
+
+<!-- NAVBAR -->
+<header id="navbar" class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+  <div class="max-w-7xl mx-auto px-6 h-[70px] flex items-center justify-between relative">
+    <a href="./index.html" class="flex items-center gap-1.5 shrink-0 no-underline w-28 h-28">
+      <img src="./assets/image/logo.png" alt="MARCARGA Logo" class="w-28 h-auto">
+    </a>
+    <nav id="desktop-nav" class="hidden md:flex items-center gap-8">
+      <a href="#" class="nav-item text-[13px] font-bold uppercase tracking-wider text-navy border-b-2 border-gold pb-0.5 hover:text-gold transition-colors">Sobre Nos</a>
+      <div class="relative group">
+        <button class="flex items-center nav-item gap-1 text-[13px] font-bold uppercase tracking-wider text-navy hover:text-gold transition-colors">
+          Agenciamento de Navios
+          <svg class="w-4 h-4 mt-[1px] transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Entrada de Navios</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Saida de Navios</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Logistica Portuaria</a>
+        </div>
+      </div>
+      <div class="relative group">
+        <button class="flex items-center nav-item gap-1 text-[13px] font-bold uppercase tracking-wider text-navy hover:text-gold transition-colors">
+          Servicos ao Armador
+          <svg class="w-4 h-4 mt-[1px] transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Entrada de Navios</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Saida de Navios</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Logistica Portuaria</a>
+        </div>
+      </div>
+      <div class="relative group">
+        <button class="flex items-center nav-item gap-1 text-[13px] font-bold uppercase tracking-wider text-navy hover:text-gold transition-colors">
+          Certificacoes
+          <svg class="w-4 h-4 mt-[1px] transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Entrada de Navios</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Saida de Navios</a>
+          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Logistica Portuaria</a>
+        </div>
+      </div>
+      <a href="./Contacts.html" class="nav-item text-[13px] font-bold uppercase tracking-wider text-navy hover:text-gold transition-colors">Contactos</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <div id="desktop-soc" class="hidden md:flex items-center gap-4">
+        <a href="#" class="soc-link text-navy hover:text-gold transition-colors">
+          <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" class="soc-link text-navy hover:text-gold transition-colors">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+      <button onclick="toggleMenu()" class="md:hidden text-navy" id="ham-icon">
+        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+    <div id="mob-menu" class="hidden md:hidden absolute top-[70px] left-0 right-0 bg-navy/95 backdrop-blur-sm flex-col gap-4 px-6 py-6 z-50">
+      <a href="./about.html" class="nav-item text-[13px] font-bold uppercase tracking-wider text-white border-b-2 border-gold pb-0.5 hover:text-gold transition-colors">Sobre Nos</a>
+      <a href="#" class="nav-item text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">Agenciamento de Navios</a>
+      <a href="#" class="nav-item text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">Servicos ao Armador</a>
+      <a href="#" class="nav-item text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">Certificacoes</a>
+      <a href="./Contacts.html" class="nav-item text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">Contactos</a>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="relative mt-[70px] py-24 px-6 text-center overflow-hidden bg-navy">
+  <div class="absolute inset-0 bg-cover bg-center opacity-40" style="background-image:url('./assets/image/bgsuporte.png')"></div>
+  <div class="relative z-10">
+    <span class="inline-block text-[11px] font-bold tracking-[.14em] uppercase text-gold mb-3">Sobre a MARCARGA</span>
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight">Acompanhe a nossa trajetoria</h1>
+    <p class="mt-3 text-white/65 text-sm md:text-base">Acompanhe a nossa trajetoria e descubra como podemos ajudar a sua empresa a alcançar novos patamares de sucesso.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="max-w-7xl mx-auto px-6 py-[72px] text-center">
+  <div class="inline-flex items-center gap-1.5 border border-navy rounded-full px-4 py-1 text-[11px] font-extrabold uppercase tracking-widest text-navy mb-5">
+    <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    MARCARGA
+  </div>
+  <h2 class="fade-up text-[clamp(1.5rem,2.8vw,2.1rem)] font-black leading-snug max-w-3xl mx-auto mb-10 text-navy">
+    A MARCARGA e dedicada a fornecer apoio especializado nos servicos de agenciamento
+    para atender as <mark class="bg-gold text-navy px-1.5 rounded not-italic">necessidades</mark> exclusivas dos armadores
+  </h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-left mt-2">
+    <div class="fade-up space-y-4">
+      <p class="text-sm text-gray-500 leading-relaxed">A MARCARGA Limitada actua no sector maritimo angolano com dedicacao e competencia, prestando servicos de agenciamento de navios e assistencia ao armador nos principais portos de Angola.</p>
+      <p class="text-sm text-gray-500 leading-relaxed">A nossa equipa altamente qualificada garante uma resposta rapida e eficiente em todas as operacoes portuarias, assegurando que cada escala decorra dentro dos prazos e com a maxima seguranca.</p>
+    </div>
+    <ul class="fade-up space-y-3">
+      <li class="text-sm text-gray-500 leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-1.5 before:h-1.5 before:rounded-full before:bg-brand">Apoio especializado na entrada e saida de navios em todos os portos angolanos, garantindo conformidade com a regulamentacao vigente.</li>
+      <li class="text-sm text-gray-500 leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-1.5 before:h-1.5 before:rounded-full before:bg-brand">Servicos abrangentes ao armador, incluindo gestao de tripulacao, aprovisionamento e assistencia tecnica em escala.</li>
+      <li class="text-sm text-gray-500 leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[9px] before:w-1.5 before:h-1.5 before:rounded-full before:bg-brand">Certificacoes internacionais que garantem os mais altos padroes de qualidade e seguranca nas operacoes maritimas.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="bg-navy">
+  <div class="max-w-7xl mx-auto px-6 py-[72px] grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+    <div class="fade-up hidden md:block">
+      <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80" alt="Equipa MARCARGA" class="w-full rounded-2xl object-cover aspect-[4/3]">
+    </div>
+    <div class="flex flex-col">
+      <div class="fade-up flex gap-6 items-start py-7 border-b border-white/10">
+        <div class="stat-num text-[clamp(2.6rem,5vw,4rem)] font-black text-white leading-none whitespace-nowrap">237<span class="text-gold">+</span></div>
+        <div><h3 class="text-base font-extrabold text-white mb-1">Navios Assistidos</h3><p class="text-[13px] text-white/50 leading-relaxed">Operacoes de agenciamento concluidas com sucesso nos principais portos angolanos e internacionais.</p></div>
+      </div>
+      <div class="fade-up flex gap-6 items-start py-7 border-b border-white/10">
+        <div class="stat-num text-[clamp(2.6rem,5vw,4rem)] font-black text-white leading-none whitespace-nowrap">109<span class="text-gold">+</span></div>
+        <div><h3 class="text-base font-extrabold text-white mb-1">Premios Recebidos</h3><p class="text-[13px] text-white/50 leading-relaxed">Reconhecimento da excelencia dos nossos servicos por parte de armadores e entidades portuarias.</p></div>
+      </div>
+      <div class="fade-up flex gap-6 items-start pt-7">
+        <div class="stat-num text-[clamp(2.6rem,5vw,4rem)] font-black text-white leading-none whitespace-nowrap">766<span class="text-gold">+</span></div>
+        <div><h3 class="text-base font-extrabold text-white mb-1">Operacoes Concluidas</h3><p class="text-[13px] text-white/50 leading-relaxed">Escalas geridas com eficiencia, pontualidade e total cumprimento dos requisitos regulatorios.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     SERVICOS CAROUSEL
+
+══════════════════════════════════════════════ -->
+<section class="py-20 px-6 overflow-hidden">
+  <div class="max-w-7xl mx-auto text-center">
+
+    <div class="fade-up inline-flex items-center gap-1.5 border border-navy rounded-full px-4 py-1 text-[11px] font-extrabold uppercase tracking-widest text-navy mb-5">
+      <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      Nossos Servicos
+    </div>
+    <h2 class="fade-up text-[clamp(1.4rem,2.8vw,2rem)] font-black leading-snug max-w-3xl mx-auto mb-12 text-navy">
+      As nossas <mark class="bg-gold text-navy px-1.5 rounded not-italic">solucoes exclusivas</mark> sao adaptadas as necessidades especificas de cada armador, para dominar cada escala portuaria com eficiencia
+    </h2>
+
+    <div class="relative">
+      <div class="overflow-hidden" id="serv-track">
+        <div class="flex transition-transform duration-500 ease-in-out" id="serv-inner" style="gap:3px;">
+
+          <!-- SLIDE 1 -->
+          <div class="serv-slide relative overflow-hidden flex-shrink-0 cursor-pointer group" style="aspect-ratio:4/3;">
+            <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=700&q=80" alt="Agenciamento" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/85 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6"><span class="inline-block bg-brand text-white text-[13px] font-extrabold uppercase tracking-wide px-5 py-2 rounded-md">Agenciamento de Navios</span></div>
+          </div>
+
+          <!-- SLIDE 2 -->
+          <div class="serv-slide relative overflow-hidden flex-shrink-0 cursor-pointer group" style="aspect-ratio:4/3;">
+            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=700&q=80" alt="Logistica" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/85 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6"><span class="inline-block bg-brand text-white text-[13px] font-extrabold uppercase tracking-wide px-5 py-2 rounded-md">Logistica Portuaria</span></div>
+          </div>
+
+          <!-- SLIDE 3 -->
+          <div class="serv-slide relative overflow-hidden flex-shrink-0 cursor-pointer group" style="aspect-ratio:4/3;">
+            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=700&q=80" alt="Armador" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/85 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6"><span class="inline-block bg-brand text-white text-[13px] font-extrabold uppercase tracking-wide px-5 py-2 rounded-md">Servicos ao Armador</span></div>
+          </div>
+
+          <!-- SLIDE 4 -->
+          <div class="serv-slide relative overflow-hidden flex-shrink-0 cursor-pointer group" style="aspect-ratio:4/3;">
+            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&q=80" alt="Certificacoes" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy/85 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6"><span class="inline-block bg-brand text-white text-[13px] font-extrabold uppercase tracking-wide px-5 py-2 rounded-md">Certificacoes</span></div>
+          </div>
+
+          <!-- ADICIONAR MAIS SLIDES AQUI -->
+
+        </div>
+      </div>
+
+      <!-- Setas -->
+      <button id="serv-prev" aria-label="Anterior" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 w-11 h-11 rounded-full bg-white shadow-lg border border-gray-200 hover:bg-navy hover:text-white hover:border-navy flex items-center justify-center text-navy transition-all duration-200 z-10">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button id="serv-next" aria-label="Proximo" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 w-11 h-11 rounded-full bg-white shadow-lg border border-gray-200 hover:bg-navy hover:text-white hover:border-navy flex items-center justify-center text-navy transition-all duration-200 z-10">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+
+    <div id="serv-dots" class="flex justify-center gap-2 mt-8"></div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     EQUIPA CAROUSEL
+    
+══════════════════════════════════════════════ -->
+<section class="bg-navy py-20 px-6 overflow-hidden">
+  <div class="max-w-7xl mx-auto">
+
+    <div class="fade-up text-center mb-12">
+      <div class="inline-flex items-center gap-1.5 border border-gold/40 rounded-full px-4 py-1 text-[11px] font-extrabold uppercase tracking-widest text-white/60 mb-5">
+        <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Nossa Equipa
+      </div>
+      <h2 class="text-[clamp(1.5rem,3vw,2.2rem)] font-black text-white leading-snug max-w-2xl mx-auto">
+        Conheca o grupo de apoio da MARCARGA,<br>composta por profissionais <span class="text-gold">altamente qualificados</span>
+      </h2>
+    </div>
+
+    <div class="relative">
+      <div class="overflow-hidden" id="team-track">
+        <div class="flex transition-transform duration-500 ease-in-out" id="team-inner" style="gap:3px;">
+
+          <!-- MEMBRO 1 -->
+          <div class="team-slide relative overflow-hidden flex-shrink-0 group" style="aspect-ratio:3/4;">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80" alt="Antonio Ferreira" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+            <div class="absolute bottom-0 left-0 right-0 bg-brand px-4 py-3">
+              <h4 class="text-[13px] font-extrabold text-white mb-0.5">Antonio Ferreira</h4>
+              <p class="text-[11px] font-semibold text-white/80 uppercase tracking-wide">Director Geral</p>
+            </div>
+          </div>
+
+          <!-- MEMBRO 2 -->
+          <div class="team-slide relative overflow-hidden flex-shrink-0 group" style="aspect-ratio:3/4;">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80" alt="Carla Mendes" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+            <div class="absolute bottom-0 left-0 right-0 bg-brand px-4 py-3">
+              <h4 class="text-[13px] font-extrabold text-white mb-0.5">Carla Mendes</h4>
+              <p class="text-[11px] font-semibold text-white/80 uppercase tracking-wide">Directora de Operacoes</p>
+            </div>
+          </div>
+
+          <!-- MEMBRO 3 -->
+          <div class="team-slide relative overflow-hidden flex-shrink-0 group" style="aspect-ratio:3/4;">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Roberto Castro" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+            <div class="absolute bottom-0 left-0 right-0 bg-brand px-4 py-3">
+              <h4 class="text-[13px] font-extrabold text-white mb-0.5">Roberto Castro</h4>
+              <p class="text-[11px] font-semibold text-white/80 uppercase tracking-wide">Agente Maritimo</p>
+            </div>
+          </div>
+
+          <!-- MEMBRO 4 -->
+          <div class="team-slide relative overflow-hidden flex-shrink-0 group" style="aspect-ratio:3/4;">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="Brigida Neto" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+            <div class="absolute bottom-0 left-0 right-0 bg-brand px-4 py-3">
+              <h4 class="text-[13px] font-extrabold text-white mb-0.5">Brigida Neto</h4>
+              <p class="text-[11px] font-semibold text-white/80 uppercase tracking-wide">Gestora de Clientes</p>
+            </div>
+          </div>
+
+          <!-- MEMBRO 5 -->
+          <div class="team-slide relative overflow-hidden flex-shrink-0 group" style="aspect-ratio:3/4;">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80" alt="Miguel Santos" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+            <div class="absolute bottom-0 left-0 right-0 bg-brand px-4 py-3">
+              <h4 class="text-[13px] font-extrabold text-white mb-0.5">Miguel Santos</h4>
+              <p class="text-[11px] font-semibold text-white/80 uppercase tracking-wide">Operacional Portuario</p>
+            </div>
+          </div>
+
+          <!-- ADICIONAR MAIS MEMBROS AQUI -->
+
+        </div>
+      </div>
+
+      <!-- Setas -->
+      <button id="team-prev" aria-label="Anterior" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 w-11 h-11 rounded-full bg-white/10 border border-white/20 hover:bg-gold hover:border-gold flex items-center justify-center text-white transition-all duration-200 z-10">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button id="team-next" aria-label="Proximo" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 w-11 h-11 rounded-full bg-white/10 border border-white/20 hover:bg-gold hover:border-gold flex items-center justify-center text-white transition-all duration-200 z-10">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+
+    <div id="team-dots" class="flex justify-center gap-2 mt-8"></div>
+
+  </div>
+</section>
+
+<!-- PARCEIROS -->
+<section class="border-t border-gray-100 py-[72px] px-6">
+  <div class="max-w-7xl mx-auto text-center">
+    <div class="fade-up mb-12">
+      <h2 class="text-[clamp(1.8rem,3.5vw,2.8rem)] font-black text-navy leading-tight">Confiavel para mais de<br>150 empresas desde 2012</h2>
+    </div>
+    <div class="fade-up flex items-center justify-center gap-10 flex-wrap">
+      <div class="flex items-center gap-2 opacity-40 hover:opacity-100 transition-opacity"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg><span class="text-sm font-extrabold text-navy">LogoIpsum</span></div>
+      <div class="flex items-center gap-2 opacity-40 hover:opacity-100 transition-opacity"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><span class="text-sm font-extrabold text-navy">LogoIpsum</span></div>
+      <div class="flex items-center gap-2 opacity-40 hover:opacity-100 transition-opacity"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span class="text-sm font-extrabold text-navy">LogoIpsum</span></div>
+      <div class="flex items-center gap-2 opacity-40 hover:opacity-100 transition-opacity"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span class="text-sm font-extrabold text-navy">LogoIpsum</span></div>
+      <div class="flex items-center gap-2 opacity-40 hover:opacity-100 transition-opacity"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg><span class="text-sm font-extrabold text-navy">LogoIpsum</span></div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer class="relative text-white py-16">
+  <div class="absolute inset-0 bg-cover bg-center -z-10" style="background-image:url('./assets/image/bg-footer.png')"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10 text-center md:text-left">
+      <div>
+        <div class="flex items-center gap-2 mb-4 justify-center md:justify-start">
+          <div class="w-10 h-10 bg-gold rounded flex items-center justify-center">
+            <div class="grid grid-cols-2 gap-0.5 p-1">
+              <div class="w-2 h-2 bg-white rounded-sm"></div>
+              <div class="w-2 h-2 bg-white rounded-sm"></div>
+              <div class="w-2 h-2 bg-white rounded-sm"></div>
+              <div class="w-2 h-2 bg-white rounded-sm"></div>
+            </div>
+          </div>
+          <div>
+            <div class="font-heading font-bold">MARCARGA</div>
+            <div class="text-white/50 text-xs">LIMITADA</div>
+          </div>
+        </div>
+        <p class="text-white/50 text-xs leading-relaxed">Simply dummy text of the printing and typesetting industry standard dummy text ever since the 1500s, when an unknown printer took.</p>
+      </div>
+      <div>
+        <h4 class="font-heading font-bold text-gold mb-4 uppercase tracking-wider text-sm">Links Rápidos</h4>
+        <ul class="space-y-2 text-white/60 text-sm">
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-heading font-bold text-gold mb-4 uppercase tracking-wider text-sm">Serviços</h4>
+        <ul class="space-y-2 text-white/60 text-sm">
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-heading font-bold text-gold mb-4 uppercase tracking-wider text-sm">Contacte-nos</h4>
+        <ul class="space-y-2 text-white/60 text-sm">
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-6 flex flex-col items-center md:flex-row md:justify-between gap-2 text-white/40 text-xs text-center">
+      <span>2025 - MARCARGA Angola Todos os Direitos Reservados</span>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-gold transition-colors">Privacidade</a>
+        <a href="#" class="hover:text-gold transition-colors">Termos de Uso</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="./js/script.js"></script>
+<script src="./js/carousel.js"></script>
+
+
+</body>
+</html>

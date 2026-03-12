@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #1a2a6c;
+  --color-navy-dark: #0d1a4a;
+  --color-gold: #f5a623;
+  --color-gold-light: #ffc107;
+
+  --color-primary: #1795C8;
+  --color-primary-light: #3aa9d6;
+
+  --font-heading: "Oswald", sans-serif;
+  --font-body: "Nunito", sans-serif;
+  --font-script: "Dancing Script", cursive;
+
+  --transition-property-filter: filter;
+}
