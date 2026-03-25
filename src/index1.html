@@ -1,392 +1,641 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maessa Angola</title>
-  <link href="./output.css" rel="stylesheet">
 
-  <link rel="icon" href="./assets/image/favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-  <script src="./js/gsap.min.js"></script>
-  <script src="./js/ScrollTrigger.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARCARGA Limitada - Logísticas & Transitários</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Nunito:wght@400;600;700&family=Dancing+Script:wght@600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="./output.css" rel="stylesheet">
 
 </head>
-<body class="font-mont bg-white overflow-x-hidden scroll-smooth">
 
-<!-- ══════════════════════════════════════════════
-     NAVBAR
-══════════════════════════════════════════════ -->
-<header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-  <div class="max-w-7xl mx-auto px-6 h-[70px] flex items-center justify-between relative">
+<body class="bg-white font-body overflow-x-hidden">
 
-    <a href="index.html" class="flex items-center gap-1.5 shrink-0 no-underline w-28 h-28">
-      <img src="./assets/image/logo.png" id="logo-main" alt="Maessa Logo" class="w-28 h-auto">
-    </a>
+    <!-- NAVBAR -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 bg-white z-50">
+        <div class="max-w-7xl mx-auto px-6 h-[70px] flex items-center justify-between relative">
 
-    <!-- Desktop nav links -->
-    <nav id="desktop-nav" class="hidden md:flex items-center gap-8">
-      <a href="./about.html" class="nav-item text-[13px] font-bold uppercase tracking-wider text-white  pb-0.5 hover:text-gold transition-colors">Sobre Nos</a>
+            <!-- Logo -->
+            <a href="./index.html" class="flex items-center shrink-0">
+                <img src="./assets/image/logo-marcarga.png" alt="MARCARGA Logo" class="h-14 w-auto">
+            </a>
 
-      <div class="relative group">
-        <button class="flex items-center nav-item gap-1 text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">
-          Agenciamento de Navios
-          <svg class="w-4 h-4 mt-[1px] transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/>
-          </svg>
+            <!-- Desktop nav links -->
+            <nav id="desktop-nav" class="hidden md:flex items-center gap-8">
+                <a href="./about.html"
+                    class="nav-item text-[13px] font-bold uppercase tracking-wider text-navy border-b-2 border-gold pb-0.5 hover:text-gold transition-colors">Sobre
+                    Nos</a>
+                <div class="relative group">
+
+                    <!-- Botão principal -->
+                    <button
+                        class="flex items-center nav-item gap-1 text-[13px] font-bold uppercase tracking-wider text-navy hover:text-gold transition-colors">
+
+                        Agenciamento de Navios
+
+                        <!-- Ícone down -->
+                        <svg class="w-4 h-4 mt-[1px] transition-transform duration-300 group-hover:rotate-180"
+                            fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+                        </svg>
+                    </button>
+
+                    <!-- Dropdown -->
+                    <div class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-xl 
+              opacity-0 invisible 
+              group-hover:opacity-100 group-hover:visible 
+              transition-all duration-300">
+
+                        <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+                            Entrada de Navios
+                        </a>
+
+                        <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+                            Saída de Navios
+                        </a>
+
+                        <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+                            Logística Portuária
+                        </a>
+
+                    </div>
+
+                </div>
+                <div class="relative group">
+
+                    <!-- Botão principal -->
+                    <button
+                        class="flex items-center nav-item gap-1 text-[13px] font-bold uppercase tracking-wider text-navy hover:text-gold transition-colors">
+
+                        Serviços ao Armador
+
+                        <!-- Ícone down -->
+                        <svg class="w-4 h-4 mt-[1px] transition-transform duration-300 group-hover:rotate-180"
+                            fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+                        </svg>
+                    </button>
+
+                    <!-- Dropdown -->
+                    <div class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-xl 
+              opacity-0 invisible 
+              group-hover:opacity-100 group-hover:visible 
+              transition-all duration-300">
+
+                        <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+                            Entrada de Navios
+                        </a>
+
+                        <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+                            Saída de Navios
+                        </a>
+
+                        <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+                            Logística Portuária
+                        </a>
+
+                    </div>
+
+                </div>
+                <div class="relative group">
+
+                    <!-- Botão principal -->
+                    <button
+                        class="flex items-center nav-item gap-1 text-[13px] font-bold uppercase tracking-wider text-navy hover:text-gold transition-colors">
+
+                        Certificações
+
+                        <!-- Ícone down -->
+                        <svg class="w-4 h-4 mt-[1px] transition-transform duration-300 group-hover:rotate-180"
+                            fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+                        </svg>
+                    </button>
+
+                    <!-- Dropdown -->
+                    <div class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-xl 
+              opacity-0 invisible 
+              group-hover:opacity-100 group-hover:visible 
+              transition-all duration-300">
+
+                        <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+                            Entrada de Navios
+                        </a>
+
+                        <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+                            Saída de Navios
+                        </a>
+
+                        <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">
+                            Logística Portuária
+                        </a>
+
+                    </div>
+
+                </div>
+                <a href="./Contacts.html"
+                    class="nav-item text-[13px] font-bold uppercase tracking-wider text-navy hover:text-gold transition-colors">Contactos</a>
+            </nav>
+
+            <!-- Social + hamburger -->
+            <div class="flex items-center gap-4">
+                <div id="desktop-soc" class="hidden md:flex items-center gap-4">
+                    <a href="#" id="soc1" class="soc-link text-navy hover:text-gold transition-colors">
+                        <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                    </a>
+                    <a href="#" id="soc2" class="soc-link text-navy hover:text-gold transition-colors">
+                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <rect x="2" y="2" width="20" height="20" rx="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                    </a>
+                </div>
+                <!-- Hamburger -->
+                <button onclick="toggleMenu()" class="md:hidden text-white" id="ham-icon">
+                    <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.5"
+                        viewBox="0 0 24 24">
+                        <path d="M3 6h18M3 12h18M3 18h18" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mob-menu"
+                class="hidden md:hidden absolute top-[70px] left-0 right-0 bg-navy/95 backdrop-blur-sm flex-col gap-4 px-6 py-6 z-50">
+                <a href="#"
+                    class="nav-item text-[13px] font-bold uppercase tracking-wider text-white border-b-2 border-gold pb-0.5 hover:text-gold transition-colors">Sobre
+                    Nos</a>
+                <a href="#"
+                    class="nav-item text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">
+                    Agenciamento de Navios
+
+                </a>
+                <a href="#"
+                    class="nav-item text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">Serviços
+                    ao Armador</a>
+                <a href="#"
+                    class="nav-item text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">Certificações</a>
+                <a href="./Contacts.html"
+                    class="nav-item text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">Contactos</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO CAROUSEL -->
+    <section id="hero-section" class="relative flex flex-col justify-between pt-16 overflow-hidden min-h-screen">
+
+        <div id="hero-slides" class="absolute inset-0 z-0">
+            <div class="hero-slide absolute inset-0 bg-cover bg-center"
+                style="background-image:linear-gradient(to bottom,rgba(10,20,60,0.72) 0%,rgba(10,30,80,0.5) 60%,rgba(0,0,0,0.45) 100%),url('https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=1600&q=80');">
+            </div>
+            <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0"
+                style="background-image:linear-gradient(to bottom,rgba(5,15,40,0.75) 0%,rgba(10,30,80,0.5) 60%,rgba(0,0,0,0.45) 100%),url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&q=80');">
+            </div>
+            <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0"
+                style="background-image:linear-gradient(to bottom,rgba(0,20,10,0.75) 0%,rgba(0,40,20,0.5) 60%,rgba(0,0,0,0.45) 100%),url('https://images.unsplash.com/photo-1519003300449-424ad0405076?w=1600&q=80');">
+            </div>
+            <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0"
+                style="background-image:linear-gradient(to bottom,rgba(20,5,5,0.75) 0%,rgba(60,10,10,0.5) 60%,rgba(0,0,0,0.45) 100%),url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1600&q=80');">
+            </div>
+        </div>
+
+        <div class="relative z-10 flex-1 flex items-center justify-center py-10">
+            <div class="w-full max-w-3xl mx-auto px-6 text-center">
+                <span id="hc-label"
+                    class="text-gold font-semibold text-xs uppercase tracking-widest block mb-3 opacity-90"></span>
+                <h1 id="hc-title"
+                    class="font-heading font-bold text-white uppercase tracking-tight leading-tight mb-5 text-4xl md:text-6xl lg:text-8xl">
+                </h1>
+                <p id="hc-desc" class="text-white/75 max-w-lg mx-auto mb-8 leading-relaxed text-sm md:text-base"></p>
+                <div class="flex flex-wrap gap-3 justify-center">
+                    <button id="hc-btn1"
+                        class="bg-gold text-white font-bold rounded-full uppercase hover:bg-yellow-400 transition shadow-lg px-7 py-3 text-sm"></button>
+                    <button id="hc-btn2"
+                        class="border-2 border-white text-white font-bold rounded-full uppercase hover:bg-white/20 transition px-7 py-3 text-sm"></button>
+                </div>
+                <div id="hero-dots" class="flex justify-center gap-2 mt-8"></div>
+            </div>
+        </div>
+
+        <button id="hero-prev"
+            class="absolute left-3 md:left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full border-2 border-white/50 flex items-center justify-center text-white hover:bg-white/20 transition">
+            <i class="fas fa-chevron-left text-xs"></i>
         </button>
-        <div class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Entrada de Navios</a>
-          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Saída de Navios</a>
-          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Logística Portuária</a>
-        </div>
-      </div>
-
-      <div class="relative group">
-        <button class="flex items-center nav-item gap-1 text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">
-          Serviços ao Armador
-          <svg class="w-4 h-4 mt-[1px] transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/>
-          </svg>
+        <button id="hero-next"
+            class="absolute right-3 md:right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full border-2 border-white/50 flex items-center justify-center text-white hover:bg-white/20 transition">
+            <i class="fas fa-chevron-right text-xs"></i>
         </button>
-        <div class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Entrada de Navios</a>
-          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Saída de Navios</a>
-          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Logística Portuária</a>
+
+        <div class="relative z-10 border-t border-white/20 bg-navy/50 backdrop-blur-sm w-full">
+            <div class="max-w-7xl mx-auto grid grid-cols-3 divide-x divide-white/20">
+                <div class="hero-tab py-3 md:py-4 px-2 md:px-6 text-center text-white/70 hover:text-white hover:bg-white/10 cursor-pointer transition font-semibold"
+                    data-idx="0">
+                    <i class="fas fa-ship block text-base md:text-xl mb-0.5"></i>
+                    <span class="text-xs md:text-sm leading-tight">Transportes marítimos</span>
+                </div>
+                <div class="hero-tab py-3 md:py-4 px-2 md:px-6 text-center text-white/70 hover:text-white hover:bg-white/10 cursor-pointer transition font-semibold"
+                    data-idx="1">
+                    <i class="fas fa-plane block text-base md:text-xl mb-0.5"></i>
+                    <span class="text-xs md:text-sm leading-tight">Transportes aéreos</span>
+                </div>
+                <div class="hero-tab py-3 md:py-4 px-2 md:px-6 text-center text-white/70 hover:text-white hover:bg-white/10 cursor-pointer transition font-semibold"
+                    data-idx="2">
+                    <i class="fas fa-truck block text-base md:text-xl mb-0.5"></i>
+                    <span class="text-xs md:text-sm leading-tight">Transportes terrestres</span>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="relative group">
-        <button class="flex items-center nav-item gap-1 text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">
-          Certificações
-          <svg class="w-4 h-4 mt-[1px] transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/>
-          </svg>
-        </button>
-        <div class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Entrada de Navios</a>
-          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Saída de Navios</a>
-          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Logística Portuária</a>
-        </div>
-      </div>
-
-      <a href="./Contacts.html" class="nav-item text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">Contactos</a>
-    </nav>
-
-    <!-- Social + hamburger -->
-    <div class="flex items-center gap-4">
-      <div id="desktop-soc" class="hidden md:flex items-center gap-4">
-        <a href="#" id="soc1" class="soc-link text-white hover:text-gold transition-colors">
-          <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-        </a>
-        <a href="#" id="soc2" class="soc-link text-white hover:text-gold transition-colors">
-          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        </a>
-      </div>
-      <button onclick="toggleMenu()" class="md:hidden text-white" id="ham-icon">
-        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </button>
-    </div>
-
-    <!-- Mobile menu -->
-    <div id="mob-menu" class="hidden md:hidden absolute top-[70px] left-0 right-0 bg-navy/95 backdrop-blur-sm flex-col gap-4 px-6 py-6 z-50">
-      <a href="#" class="nav-item text-[13px] font-bold uppercase tracking-wider text-white border-b-2 border-gold pb-0.5 hover:text-gold transition-colors">Sobre Nos</a>
-
-      <div class="relative group">
-        <button class="flex items-center nav-item gap-1 text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">
-          Agenciamento de Navios
-          <svg class="w-4 h-4 mt-[1px] transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/>
-          </svg>
-        </button>
-        <div class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Entrada de Navios</a>
-          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Saída de Navios</a>
-          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Logística Portuária</a>
-        </div>
-      </div>
-
-      <div class="relative group">
-        <button class="flex items-center nav-item gap-1 text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">
-          Serviços ao Armador
-          <svg class="w-4 h-4 mt-[1px] transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/>
-          </svg>
-        </button>
-        <div class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Entrada de Navios</a>
-          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Saída de Navios</a>
-          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Logística Portuária</a>
-        </div>
-      </div>
-
-      <div class="relative group">
-        <button class="flex items-center nav-item gap-1 text-[13px] font-bold uppercase tracking-wider text-white hover:text-gold transition-colors">
-          Certificações
-          <svg class="w-4 h-4 mt-[1px] transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/>
-          </svg>
-        </button>
-        <div class="absolute left-0 mt-3 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Entrada de Navios</a>
-          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Saída de Navios</a>
-          <a href="#" class="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100">Logística Portuária</a>
-        </div>
-      </div>
-
-      <a href="./Contact.html" class="nav-item text-[13px] font-bold uppercase tracking-wider text-white pb-0.5 hover:text-gold transition-colors">Contactos</a>
-    </div>
-  </div>
-</header>
-
-<!-- ══════════════════════════════════════════════
-     HERO
-══════════════════════════════════════════════ -->
-<section id="hero" class="relative w-full h-screen min-h-[560px] flex items-center overflow-hidden">
-
-  <!-- VIDEO CAROUSEL -->
-  <div class="absolute inset-0 overflow-hidden">
-    <div id="video-carousel" class="relative w-full h-full">
-
-      <!-- VIDEO 1 -->
-      <div class="video-slide absolute inset-0 opacity-0 transition-opacity duration-[1500ms] ease-in-out">
-        <video class="carousel-video w-full h-full object-cover transition-transform duration-[10000ms] ease-in-out scale-100" muted playsinline preload="auto">
-          <source src="./assets/videos/video1.mp4" type="video/mp4">
-        </video>
-      </div>
-
-      <!-- VIDEO 2 -->
-      <div class="video-slide absolute inset-0 opacity-0 transition-opacity duration-[1500ms] ease-in-out">
-        <video class="carousel-video w-full h-full object-cover transition-transform duration-[10000ms] ease-in-out scale-100" muted playsinline preload="auto">
-          <source src="./assets/videos/video2.mp4" type="video/mp4">
-        </video>
-      </div>
-
-      <!-- VIDEO 3 -->
-      <div class="video-slide absolute inset-0 opacity-0 transition-opacity duration-[1500ms] ease-in-out">
-        <video class="carousel-video w-full h-full object-cover transition-transform duration-[10000ms] ease-in-out scale-100" muted playsinline preload="auto">
-          <source src="./assets/videos/video3.mp4" type="video/mp4">
-        </video>
-      </div>
-
-    </div>
-
-    <!-- Overlay — gradient via arbitrary value -->
-    <div class="absolute inset-0 z-[5] [background:linear-gradient(160deg,rgba(18,18,140,0.55)_0%,rgba(25,25,160,0.40)_50%,rgba(8,8,70,0.65)_100%)]"></div>
-  </div>
-
-  <!-- Content -->
-  <div class="relative z-10 w-full max-w-7xl mx-auto px-6 flex flex-col justify-center h-full pt-[70px]">
-
-    <div class="flex items-end justify-center gap-6">
-      <div class="flex flex-col gap-4">
-
-        <!-- Play Button -->
-        <div id="play-btn" class="shrink-0">
-          <button class="w-20 h-20 md:w-[90px] md:h-[90px] rounded-full bg-white/20 border-[3px] border-white/65 flex items-center justify-center cursor-pointer hover:bg-white/35 transition-all duration-200 hover:scale-105 active:scale-95">
-            <svg class="w-7 h-7 md:w-8 md:h-8 fill-white ml-1" viewBox="0 0 24 24">
-              <polygon points="5 3 19 12 5 21 5 3"/>
-            </svg>
-          </button>
+    <!-- ABOUT SECTION -->
+    <section class="relative overflow-hidden bg-[#eef4fb]">
+        <div id="crane-container" class="absolute top-0 right-8 md:right-24 z-10 flex flex-col items-center origin-top">
+            <div class="w-px bg-gray-400 h-0"></div>
+            <div class="relative" id="swinging-box">
+                <img src="./assets/image/container-suspend.png" alt="Container"
+                    class="w-24 md:w-36 h-16 md:h-24 md:none object-cover [transform:perspective(400px)_rotateX(8deg)]">
+            </div>
         </div>
 
-        <!-- H1 -->
-        <h1 class="text-[18vw] max-md:text-[22vw] font-extrabold uppercase text-white leading-[0.85] [-webkit-letter-spacing:-8px] [letter-spacing:-8px]">
-          MAESSA
-        </h1>
+        <div class="max-w-7xl mx-auto px-0 md:px-4 grid md:grid-cols-2 gap-0 md:gap-12 items-center min-h-96">
+            <div class="relative hidden md:block opacity-0 translate-y-10 h-72 md:h-auto md:min-h-96" id="about-img">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&q=80" alt="Port Containers"
+                    class="w-full h-full object-cover md:rounded-r-3xl shadow-xl max-h-[420px] min-h-[280px]">
+            </div>
 
-        <!-- Subtitle -->
-        <div id="htitle1" class="text-white font-black pl-16  uppercase leading-[0.93] tracking-tight text-[clamp(0.8rem,1vw,2rem)]">
-          LOGISTICAS&nbsp;&nbsp;& TRANSITARIOS
+            <div class="opacity-0 translate-y-10 px-6 md:px-0 py-12 md:py-16 pr-8 md:pr-16" id="about-text">
+                <span
+                    class="inline-block px-3.5 py-0.5 border border-navy rounded-full text-xs text-navy font-semibold mb-5">Sobre
+                    a MARCARGA</span>
+                <h2 class="font-heading text-2xl md:text-4xl font-bold text-gray-800 mt-4 mb-5 leading-snug">
+                    Provemos <span class="font-script text-gold italic text-[1.15em]">Serviços</span> exclusivos<br>
+                    de <span class="text-navy font-black underline decoration-gold decoration-2">Logísticas</span>
+                    &amp; <span class="text-gold font-black underline decoration-navy decoration-2">Transportes</span>
+                    pra si
+                </h2>
+                <p class="text-gray-500 text-sm leading-relaxed mb-7 max-w-md text-center">
+                    Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown printer took.
+                </p>
+                <div class="flex flex-wrap gap-4 items-center">
+                    <a href="./about.html"
+                        class="flex items-center gap-2 bg-gold text-white font-bold pl-5 pr-2 py-2 rounded-full text-sm hover:bg-yellow-500 transition shadow group">
+
+                        Explorar
+
+                        <span
+                            class="w-7 h-7 rounded-full bg-white/30 flex items-center justify-center group-hover:bg-white/40 transition">
+                            <i class="fas fa-chevron-right text-xs"></i>
+                        </span>
+
+                    </a>
+                    <div class="flex items-center gap-2">
+                        <div class="w-10 h-10 rounded-full bg-navy flex items-center justify-center shadow">
+                            <i class="fas fa-phone text-white text-sm"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-gray-400 font-semibold">Linha de Apoio</div>
+                            <div class="font-bold text-navy text-sm">923 85 12 99</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="relative py-10 bg-gray-50 overflow-hidden" id="services-section">
+        <div class="absolute inset-0 pointer-events-none bg-cover bg-center"
+            style="background-image: url('./assets/image/bg-services.png');"></div>
+        <div class="max-w-7xl mx-auto px-4 text-center mb-4 opacity-0 translate-y-10" id="services-title">
+            <span class="text-gold font-bold uppercase tracking-widest text-xs">NOSSOS SERVIÇOS</span>
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-800 mt-2">
+                Acompanhe todos os nossos serviços<br>ao redor de angola
+            </h2>
         </div>
 
-      </div>
-    </div>
+        <div class="relative w-full flex flex-col items-center" style="perspective: 1200px;">
+            <p class="text-gray-400 text-xs mb-6 flex items-center gap-2 select-none">
+                <i class="fas fa-hand-pointer"></i> Arraste para explorar os serviços
+            </p>
 
-    <!-- Saiba Mais btn -->
-    <div id="saiba-wrap" class="mt-10 flex justify-center">
-      <a href="./about.html" class="inline-flex items-center gap-2.5 bg-gold text-black font-bold text-[13px] tracking-wide px-5 py-3 rounded-full hover:opacity-90 transition-all hover:-translate-y-0.5 active:scale-95">
-        Saiba Mais
-        <span class="w-7 h-7 bg-white/90 rounded-full flex items-center justify-center shrink-0">
-          <svg class="w-3 h-3" fill="none" stroke="black" stroke-width="3" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-        </span>
-      </a>
-    </div>
-  </div>
+            <div id="card-stage" class="relative w-full flex items-center justify-center h-[480px]"
+                style="perspective: 1200px; transform-style: preserve-3d;"></div>
 
-  <!-- Scroll indicator -->
-  <a href="#parceiros" 
-   class="absolute right-6 top-1/2 -translate-y-1/2 z-10 hidden md:block cursor-pointer">
-    
-    <div class="relative w-6 h-11 border-2 border-white/75 rounded-xl overflow-hidden">
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-                w-[5px] h-[10px] bg-white rounded-full animate-bounce"></div>
-</div>
+            <div id="card-dots" class="flex gap-2 mt-6"></div>
 
-</a>
-</section>
-
-<!-- ══════════════════════════════════════════════
-     PARCEIROS
-══════════════════════════════════════════════ -->
-<section id="parceiros" class="relative bg-[#eef0f7] py-16 px-6 overflow-hidden">
-
-    <!-- Background image via arbitrary value --> 
- <div 
-  class="absolute inset-0 pointer-events-none bg-cover bg-center"
-  style="background-image: url('./assets/image/bg-parceiro.png');">
-</div>
-  <!-- Decorative diamonds -->
-  <div class="absolute -right-16 -top-16 w-72 h-72 border-[50px] border-[#b4bcd8]/15 rounded-2xl rotate-[35deg] pointer-events-none"></div>
-  <div class="absolute right-10 -bottom-24 w-56 h-56 border-[42px] border-[#b4bcd8]/12 rounded-2xl rotate-[35deg] pointer-events-none"></div>
-
-  <div class="relative z-10 max-w-5xl mx-auto">
-    <p id="p-title" class="text-center font-extrabold text-lg text-gray-900 mb-12">
-      Nossos Parceiros
-    </p>
-
-    <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16">
-
-      <div class="p-logo flex items-center gap-2.5 opacity-80 hover:opacity-100 hover:-translate-y-1 transition-all duration-200 cursor-default">
-        <div class="w-11 h-11 rounded-full bg-[#e8a000] flex items-center justify-center text-white font-black text-xl shrink-0">S</div>
-        <span class="text-xl font-extrabold text-gray-900">Sonangol</span>
-      </div>
-
-      <div class="p-logo flex items-center opacity-80 hover:opacity-100 hover:-translate-y-1 transition-all duration-200 cursor-default">
-        <span class="text-[1.65rem] font-black text-[#e63946]">G</span>
-        <span class="text-[1.65rem] font-black text-gray-900 tracking-tight">UNITEL</span>
-      </div>
-
-      <div class="p-logo flex items-center gap-3 opacity-80 hover:opacity-100 hover:-translate-y-1 transition-all duration-200 cursor-default">
-        <svg width="42" height="34" viewBox="0 0 42 34" fill="none">
-          <polygon points="0,0 21,17 0,34" fill="#e63946"/>
-          <polygon points="21,0 42,17 21,34" fill="#003087"/>
-        </svg>
-        <span class="text-xl font-extrabold text-gray-900">Chevron</span>
-      </div>
-
-      <div class="p-logo flex items-center opacity-80 hover:opacity-100 hover:-translate-y-1 transition-all duration-200 cursor-default">
-        <span class="text-[1.7rem] font-black text-[#b5006a] tracking-tight">afric</span>
-        <span class="text-[1.7rem] font-black text-gray-800">ell</span>
-        <span class="text-[2rem] font-black text-[#b5006a] leading-none -mt-1">●</span>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════════════
-     SUPORTE CTA
-══════════════════════════════════════════════ -->
-<section id="cta-sec" class="relative bg-cta overflow-hidden py-16 sm:py-20 md:py-28 px-6">
-
-  <!-- Background image via arbitrary value --> 
- <div 
-  class="absolute inset-0 pointer-events-none bg-cover bg-center"
-  style="background-image: url('./assets/image/bgsuporte.png');">
-</div>
-
-  <!-- Glow orbs -->
-  <div class="absolute -left-40 -top-40 w-[300px] sm:w-[400px] md:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] rounded-full bg-white/[0.03] pointer-events-none"></div>
-  <div class="absolute -right-20 -bottom-40 w-[250px] sm:w-[350px] md:w-[420px] h-[250px] sm:h-[350px] md:h-[420px] rounded-full bg-white/[0.04] pointer-events-none"></div>
-
-  <!-- Content -->
-  <div class="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16">
-
-    <div id="cta-l" class="text-center md:text-left">
-      <h2 class="text-white font-extrabold text-[clamp(2rem,6vw,4rem)] leading-[1.1]">
-        Precisa de <br class="hidden sm:block"> suporte ?
-      </h2>
-    </div>
-
-    <div id="cta-r" class="flex flex-col gap-6 max-w-lg w-full items-center md:items-start text-center md:text-left">
-      <p class="text-white/85 text-[clamp(1rem,2.5vw,1.1rem)] leading-relaxed font-medium">
-        Pensando em si, criámos a nossa linha de apoio para melhor o servir
-      </p>
-      <a href="#" class="inline-flex items-center gap-4 bg-gold text-black font-extrabold text-[clamp(0.95rem,2.5vw,1.1rem)] px-7 sm:px-9 py-4 sm:py-5 rounded-2xl hover:opacity-90 hover:-translate-y-0.5 transition-all duration-200 active:scale-95">
-        Contacte – nos
-        <span class="w-8 h-8 sm:w-9 sm:h-9 bg-white/30 rounded-full flex items-center justify-center shrink-0">
-          <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24">
-            <line x1="22" y1="2" x2="11" y2="13"/>
-            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-          </svg>
-        </span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- VIDEO MODAL -->
-<div id="video-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500 z-[999]">
-  <div class="relative w-[90%] md:w-[70%] max-w-4xl">
-    <button id="close-video" class="absolute -top-12 right-0 text-white text-3xl font-bold hover:text-gold transition">✕</button>
-    <video id="modal-video" class="w-full rounded-xl shadow-2xl" controls>
-      <source src="./assets/videos/video3.mp4" type="video/mp4">
-    </video>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════════
-     FOOTER
-══════════════════════════════════════════════ -->
-<footer id="footer-sec" class="bg-white border-t border-gray-100 pt-8 pb-8 px-6">
-  <div class="max-w-5xl mx-auto flex flex-col items-center">
-
-    <div class="w-full flex flex-col items-center gap-8 md:grid md:grid-cols-3 md:items-center md:gap-10">
-
-      <!-- Brand -->
-      <div class="flex flex-col items-center md:items-start text-center md:text-left">
-        <a href="#" class="flex items-center gap-2.5 mb-4">
-          <img src="./assets/image/logo-black.png" alt="Maessa Logo" class="w-32 md:w-36">
-        </a>
-        <p class="text-[13px] text-gray-400 leading-relaxed max-w-[260px]">
-          Larana randomised words which don't look even slightly thjffhj.
-        </p>
-      </div>
-
-      <!-- Links -->
-      <div class="flex flex-col items-center text-center">
-        <nav class="flex flex-col gap-2 md:gap-2">
-          <a href="#" class="text-[12.5px] font-bold uppercase tracking-widest text-gray-800 hover:text-brand transition-colors">Sobre Nós</a>
-          <a href="#" class="text-[12.5px] font-bold uppercase tracking-widest text-gray-800 hover:text-brand transition-colors">Serviços</a>
-          <a href="#" class="text-[12.5px] font-bold uppercase tracking-widest text-gray-800 hover:text-brand transition-colors">Projectos</a>
-          <a href="#" class="text-[12.5px] font-bold uppercase tracking-widest text-gray-800 hover:text-brand transition-colors">Blogs</a>
-          <a href="#" class="text-[12.5px] font-bold uppercase tracking-widest text-gray-800 hover:text-brand transition-colors">Contactos</a>
-        </nav>
-      </div>
-
-      <!-- Social -->
-      <div class="flex justify-center md:justify-end">
-        <div class="flex items-center gap-3 flex-wrap justify-center">
-          <a href="#" class="w-9 h-9 rounded-lg bg-navy flex items-center justify-center text-white hover:bg-brand transition">
-            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          </a>
-          <a href="#" class="w-9 h-9 rounded-lg bg-navy flex items-center justify-center text-white hover:bg-sky-500 transition">
-            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 12 8v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
-          </a>
-          <a href="#" class="w-9 h-9 rounded-lg bg-[#c2185b] flex items-center justify-center text-white hover:opacity-85 transition">
-            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg>
-          </a>
-          <a href="#" class="w-9 h-9 rounded-lg bg-[#0077b5] flex items-center justify-center text-white hover:opacity-85 transition">
-            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/></svg>
-          </a>
+            <div class="flex gap-4 mt-5">
+                <button id="prev-card"
+                    class="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition shadow-lg">
+                    <i class="fas fa-chevron-left text-sm"></i>
+                </button>
+                <button id="next-card"
+                    class="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition shadow-lg">
+                    <i class="fas fa-chevron-right text-sm"></i>
+                </button>
+            </div>
         </div>
-      </div>
 
-    </div>
 
-    <div class="mt-10 pt-5 border-t border-gray-100 flex flex-col items-center gap-2 text-center md:flex-row md:justify-between md:gap-3 w-full">
-      <span class="text-[13px] text-gray-400">© 2025 Maessa, Todos os Direitos Reservados</span>
-      <span class="text-[13px] text-gray-400">Feito por Maessa</span>
-    </div>
+    </section>
 
-  </div>
-</footer>
+    <!-- WORK PROCESS -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none bg-cover bg-center"
+            style="background-image: url('./assets/image/bg-process.png');"></div>
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16 opacity-0 translate-y-10" id="process-title">
+                <span
+                    class="inline-block px-3.5 py-0.5 border border-gold rounded-full text-xs text-gold font-semibold mb-3">Processo
+                    de trabalho</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-white mt-3">
+                    Como funciona o nosso sistema<br>de transporte logístico
+                </h2>
+            </div>
 
-<!-- ══════════════════════════════════════════════
-     SCRIPTS
-══════════════════════════════════════════════ -->
-<script src="./js/script.js"></script>
+            <div class="grid md:grid-cols-3 gap-8 relative">
+                <div class="hidden md:block absolute h-0.5 top-20 left-[16.66%] right-[16.66%]"
+                    style="background: repeating-linear-gradient(to right,rgba(255,255,255,0.5) 0,rgba(255,255,255,0.5) 10px,transparent 10px,transparent 20px);">
+                </div>
+
+                <div class="opacity-0 translate-y-10 text-center" id="step-1">
+                    <div class="relative inline-block mb-6">
+                        <div class="w-36 h-36 rounded-full overflow-hidden border-4 border-gold mx-auto">
+                            <img src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=300&q=80"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div
+                            class="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-gold flex items-center justify-center font-heading font-bold text-white text-lg shadow-lg">
+                            01</div>
+                    </div>
+                    <h3 class="text-white font-heading font-bold text-lg mb-2">Passo 1: Recepção da encomenda</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Simply dummy text of the printing industry standard
+                        dummy text ever since the 1500s, when an unknown printer took</p>
+                </div>
+
+                <div class="opacity-0 translate-y-10 text-center" id="step-2">
+                    <div class="relative inline-block mb-6">
+                        <div class="w-36 h-36 rounded-full overflow-hidden border-4 border-gold mx-auto">
+                            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=300&q=80"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div
+                            class="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-gold flex items-center justify-center font-heading font-bold text-white text-lg shadow-lg">
+                            02</div>
+                    </div>
+                    <h3 class="text-white font-heading font-bold text-lg mb-2">Passo 2: Recepção da encomenda</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Simply dummy text of the printing industry standard
+                        dummy text ever since the 1500s, when an unknown printer took</p>
+                </div>
+
+                <div class="opacity-0 translate-y-10 text-center" id="step-3">
+                    <div class="relative inline-block mb-6">
+                        <div class="w-36 h-36 rounded-full overflow-hidden border-4 border-gold mx-auto">
+                            <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=300&q=80"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div
+                            class="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-gold flex items-center justify-center font-heading font-bold text-white text-lg shadow-lg">
+                            03</div>
+                    </div>
+                    <h3 class="text-white font-heading font-bold text-lg mb-2">Passo 3: Recepção da encomenda</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Simply dummy text of the printing industry standard
+                        dummy text ever since the 1500s, when an unknown printer took</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section class="py-14 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-center text-gray-400 font-semibold text-sm uppercase tracking-widest mb-8">Parceiros</p>
+            <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16">
+                <div
+                    class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
+                    <div
+                        class="w-8 h-8 bg-yellow-500 rounded flex items-center justify-center font-bold text-white text-xs">
+                        S</div>
+                    <span class="font-bold text-gray-600 text-lg">Sonangol</span>
+                </div>
+                <div
+                    class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
+                    <div
+                        class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center font-bold text-white text-xs">
+                        U</div>
+                    <span class="font-bold text-gray-600 text-lg">UNITEL</span>
+                </div>
+                <div
+                    class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
+                    <div
+                        class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold text-white text-xs">
+                        ▶</div>
+                    <span class="font-bold text-gray-600 text-lg">Chevron</span>
+                </div>
+                <div
+                    class="flex items-center gap-2 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
+                    <div
+                        class="w-8 h-8 bg-orange-500 rounded flex items-center justify-center font-bold text-white text-xs">
+                        A</div>
+                    <span class="font-bold text-gray-600 text-lg">africell</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG / ACTIVITIES -->
+    <section class="py-20 relative bg-white overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none bg-cover bg-center"
+            style="background-image: url('./assets/image/bg-services.png');"></div>
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12 opacity-0 translate-y-10" id="blog-title">
+                <span
+                    class="inline-block px-3.5 py-0.5 border border-navy rounded-full text-xs text-navy font-semibold mb-3">Nossas
+                    Actividades</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-800 mt-3">
+                    Acompanhe as actividades da MARCARGA
+                </h2>
+                <p class="text-gray-400 text-sm mt-2">simply standard dummy text ever since the 1500s, when an unknown
+                    printer took</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <div class="opacity-0 translate-y-10 rounded-2xl overflow-hidden shadow-md border border-gray-100 bg-white group"
+                    id="blog-1">
+                    <div class="overflow-hidden h-44">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="w-2 h-2 rounded-full bg-gold inline-block"></span>
+                            <span class="text-gray-400 text-xs">12 de Março, 2019</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-gray-800 text-base mb-2 leading-snug">Top 5 benefícios em
+                            terceirizar serviços logísticos</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-4">Simply dummy text of the printing and
+                            typesetting industry standard dummy text ever since the 1500s...</p>
+                        <a href="#"
+                            class="inline-flex items-center gap-1 text-navy font-bold text-xs hover:text-gold transition-colors group/link">
+                            Saiba Mais
+                            <span class="inline-block transition-transform group-hover/link:translate-x-1">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="opacity-0 translate-y-10 rounded-2xl overflow-hidden shadow-md border border-gray-100 bg-white group"
+                    id="blog-2">
+                    <div class="overflow-hidden h-44">
+                        <img src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=600&q=80"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="w-2 h-2 rounded-full bg-gold inline-block"></span>
+                            <span class="text-gray-400 text-xs">11 de Janeiro, 2019</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-gray-800 text-base mb-2 leading-snug">Top 5 benefícios em
+                            terceirizar serviços logísticos</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-4">Simply dummy text of the printing and
+                            typesetting industry standard dummy text ever since the 1500s...</p>
+                        <a href="#"
+                            class="inline-flex items-center gap-1 text-navy font-bold text-xs hover:text-gold transition-colors group/link">
+                            Saiba Mais
+                            <span class="inline-block transition-transform group-hover/link:translate-x-1">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="opacity-0 translate-y-10 rounded-2xl overflow-hidden shadow-md border border-gray-100 bg-white group"
+                    id="blog-3">
+                    <div class="overflow-hidden h-44">
+                        <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&q=80"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="w-2 h-2 rounded-full bg-gold inline-block"></span>
+                            <span class="text-gray-400 text-xs">22 de Janeiro, 2019</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-gray-800 text-base mb-2 leading-snug">Top 5 benefícios em
+                            terceirizar serviços logísticos</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-4">Simply dummy text of the printing and
+                            typesetting industry standard dummy text ever since the 1500s...</p>
+                        <a href="#"
+                            class="inline-flex items-center gap-1 text-navy font-bold text-xs hover:text-gold transition-colors group/link">
+                            Saiba Mais
+                            <span class="inline-block transition-transform group-hover/link:translate-x-1">→</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SUPPORT SECTION -->
+    <section class="relative min-h-[220px] py-10">
+        <div class="absolute inset-0 pointer-events-none bg-cover bg-center"
+            style="background-image: url('./assets/image/bg-support.png');"></div>
+        <div class="hidden lg:block absolute left-0 bottom-0 w-60 pointer-events-none select-none opacity-90">
+            <img src="./assets/image/truck.png" alt="Truck" class="w-full h-full object-contain object-bottom">
+        </div>
+        <div class="hidden lg:block absolute -right-1 bottom-0 w-64 pointer-events-none select-none">
+            <img src="./assets/image/man-suport.png" alt="Support" class="w-full object-contain">
+        </div>
+        <div class="relative z-10 flex flex-col items-center justify-center text-center px-4">
+            <h2 class="font-heading font-bold text-white text-4xl md:text-5xl uppercase mb-3">PRECISA DE SUPORTE?</h2>
+            <p class="text-white/80 text-sm mb-8">Deixe o seu duvida, que iremos responder</p>
+            <div class="flex flex-wrap gap-3 justify-center">
+                <button
+                    class="bg-navy text-white font-bold px-7 py-3 rounded-full text-sm hover:bg-navy-dark transition shadow-lg">
+                    Contactar
+                </button>
+                <div class="flex items-center gap-2 bg-white/25 border border-white/30 px-5 py-3 rounded-full">
+                    <div class="w-7 h-7 rounded-full bg-navy flex items-center justify-center">
+                        <i class="fas fa-phone text-white text-xs"></i>
+                    </div>
+                    <span class="text-white font-bold text-sm">928 40 31 86</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="relative text-white py-16">
+        <div class="absolute inset-0 bg-cover bg-center -z-10"
+            style="background-image:url('./assets/image/bg-footer.png')"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10 text-center md:text-left">
+                <div>
+                    <div class="flex items-center gap-2 mb-4 justify-center md:justify-start">
+
+                        <div>
+                            <a href="./index.html" class="flex items-center shrink-0">
+                                <img src="./assets/image/logo-black.png" alt="MARCARGA Logo" class="h-18 w-auto">
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-white/50 text-xs leading-relaxed">Simply dummy text of the printing and typesetting
+                        industry standard dummy text ever since the 1500s, when an unknown printer took.</p>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-gold mb-4 uppercase tracking-wider text-sm">Links Rápidos
+                    </h4>
+                    <ul class="space-y-2 text-white/60 text-sm">
+                        <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-gold mb-4 uppercase tracking-wider text-sm">Serviços</h4>
+                    <ul class="space-y-2 text-white/60 text-sm">
+                        <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-gold mb-4 uppercase tracking-wider text-sm">Contacte-nos</h4>
+                    <ul class="space-y-2 text-white/60 text-sm">
+                        <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+                        <li><a href="#" class="hover:text-gold transition-colors">Sobre nós</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-white/10 pt-6 flex flex-col items-center md:flex-row md:justify-between gap-2 text-white/40 text-xs text-center">
+                <span>2025 - MARCARGA Angola Todos os Direitos Reservados</span>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-gold transition-colors">Privacidade</a>
+                    <a href="#" class="hover:text-gold transition-colors">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
 
 </body>
+
 </html>

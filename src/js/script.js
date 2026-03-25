@@ -2,22 +2,17 @@ gsap.registerPlugin(ScrollTrigger);
 
 // ===== HERO CAROUSEL =====
 (function () {
-  const SLIDES = [
-    { label: 'Serviços de Excelência', titleHtml: 'LOGÍSTICAS &<br><span class="text-gold">TRANSITÁRIOS</span>', desc: 'Soluções completas de logística marítima, aérea e terrestre em Angola e no mundo.', btn1: 'Saiba Mais', btn2: 'Os Nossos Serviços' },
-    { label: 'Transporte Aéreo',       titleHtml: 'CARGA<br><span class="text-gold">AÉREA</span>',               desc: 'Transporte rápido e seguro das suas mercadorias por via aérea para qualquer destino.', btn1: 'Contactar', btn2: 'Ver Detalhes' },
-    { label: 'Transporte Terrestre',   titleHtml: 'ROTAS<br><span class="text-gold">NACIONAIS</span>',            desc: 'Cobertura total do território angolano com frota própria e rastreamento em tempo real.', btn1: 'Saiba Mais', btn2: 'Ver Cobertura' },
-    { label: 'Armazenagem',            titleHtml: 'GESTÃO<br><span class="text-gold">DE STOCKS</span>',           desc: 'Armazéns modernos e seguros com gestão inteligente das suas mercadorias.', btn1: 'Explorar', btn2: 'Os Nossos Armazéns' },
-  ];
 
-  const bgSlides  = document.querySelectorAll('.hero-slide');
-  const dots      = document.getElementById('hero-dots');
-  const tabs      = document.querySelectorAll('.hero-tab');
-  const label     = document.getElementById('hc-label');
-  const title     = document.getElementById('hc-title');
-  const desc      = document.getElementById('hc-desc');
-  const btn1      = document.getElementById('hc-btn1');
-  const btn2      = document.getElementById('hc-btn2');
-  const content   = document.getElementById('hc-title').parentElement;
+
+  const bgSlides = document.querySelectorAll('.hero-slide');
+  const dots = document.getElementById('hero-dots');
+  const tabs = document.querySelectorAll('.hero-tab');
+  const label = document.getElementById('hc-label');
+  const title = document.getElementById('hc-title');
+  const desc = document.getElementById('hc-desc');
+  const btn1 = document.getElementById('hc-btn1');
+  const btn2 = document.getElementById('hc-btn2');
+  const content = document.getElementById('hc-title').parentElement;
 
   let current = 0, timer, busy = false;
   const N = SLIDES.length;
@@ -25,7 +20,7 @@ gsap.registerPlugin(ScrollTrigger);
   SLIDES.forEach((_, i) => {
     const d = document.createElement('button');
     d.className = 'hero-dot h-2 rounded-full transition-all duration-300';
-    d.style.cssText = `width:${i===0?'28px':'8px'};background:${i===0?'#f5a623':'rgba(255,255,255,0.35)'}`;
+    d.style.cssText = `width:${i === 0 ? '28px' : '8px'};background:${i === 0 ? '#f5a623' : 'rgba(255,255,255,0.35)'}`;
     d.addEventListener('click', () => { stopT(); goTo(i); startT(); });
     dots.appendChild(d);
   });
@@ -48,10 +43,10 @@ gsap.registerPlugin(ScrollTrigger);
   function paintContent(idx) {
     const s = SLIDES[idx];
     label.textContent = s.label;
-    title.innerHTML   = s.titleHtml;
-    desc.textContent  = s.desc;
-    btn1.textContent  = s.btn1;
-    btn2.textContent  = s.btn2;
+    title.innerHTML = s.titleHtml;
+    desc.textContent = s.desc;
+    btn1.textContent = s.btn1;
+    btn2.textContent = s.btn2;
     setDots(idx);
     setTabs(idx);
   }
@@ -62,7 +57,7 @@ gsap.registerPlugin(ScrollTrigger);
     const prev = current;
     current = ((next % N) + N) % N;
 
-    gsap.to(bgSlides[prev],    { opacity: 0, duration: 1, ease: 'power2.inOut' });
+    gsap.to(bgSlides[prev], { opacity: 0, duration: 1, ease: 'power2.inOut' });
     gsap.fromTo(bgSlides[current], { opacity: 0 }, { opacity: 1, duration: 1, ease: 'power2.inOut' });
 
     gsap.to(content, {
@@ -71,8 +66,10 @@ gsap.registerPlugin(ScrollTrigger);
         paintContent(current);
         gsap.fromTo(content,
           { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 0.55, ease: 'power3.out',
-            onComplete: () => { busy = false; } }
+          {
+            opacity: 1, y: 0, duration: 0.55, ease: 'power3.out',
+            onComplete: () => { busy = false; }
+          }
         );
       }
     });
@@ -82,7 +79,7 @@ gsap.registerPlugin(ScrollTrigger);
   gsap.fromTo(content, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 1, ease: 'power3.out', delay: 0.3 });
 
   function startT() { timer = setInterval(() => goTo(current + 1), 5000); }
-  function stopT()  { clearInterval(timer); }
+  function stopT() { clearInterval(timer); }
   startT();
 
   document.getElementById('hero-next').addEventListener('click', () => { stopT(); goTo(current + 1); startT(); });
@@ -113,7 +110,8 @@ function scrollAnim(id, delay = 0) {
   if (!el) return;
   gsap.fromTo(el,
     { y: 50, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.9, delay, ease: "power2.out",
+    {
+      y: 0, opacity: 1, duration: 0.9, delay, ease: "power2.out",
       scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none none" }
     }
   );
@@ -224,7 +222,7 @@ function initCards() {
     stage.appendChild(card);
     cardEls.push(card);
     const rel = ((i - currentIndex) + n) % n;
-    const relSigned = rel > n/2 ? rel - n : rel;
+    const relSigned = rel > n / 2 ? rel - n : rel;
     const props = getCardProps(relSigned);
     gsap.set(card, { x: props.x, z: props.z, scale: props.scale, rotateY: props.rotY, opacity: props.opacity, zIndex: props.zIndex, filter: `brightness(${props.brightness})` });
     card.addEventListener('mousedown', onDragStart);
@@ -236,7 +234,7 @@ function layoutCards(animate = true) {
   const n = SERVICES.length;
   for (let i = 0; i < n; i++) {
     const rel = ((i - currentIndex) + n) % n;
-    const relSigned = rel > n/2 ? rel - n : rel;
+    const relSigned = rel > n / 2 ? rel - n : rel;
     const props = getCardProps(relSigned);
     if (animate) {
       applyProps(cardEls[i], props);
@@ -319,19 +317,19 @@ const closeIcon = document.querySelector("#closeIcon");
 let open = false;
 
 const tl = gsap.timeline({ paused: true });
-tl.to(menu, { opacity:1, pointerEvents:"auto", duration:0.5, ease:"power3.out" })
-  .from(links, { y:100, opacity:0, stagger:0.08, duration:0.6, ease:"power3.out" }, "-=0.3");
+tl.to(menu, { opacity: 1, pointerEvents: "auto", duration: 0.5, ease: "power3.out" })
+  .from(links, { y: 100, opacity: 0, stagger: 0.08, duration: 0.6, ease: "power3.out" }, "-=0.3");
 
 document.querySelector("#menuBtn").addEventListener("click", () => {
   if (!open) {
     tl.play();
-    gsap.to(hamburger, { opacity:0, rotate:90, duration:0.3 });
-    gsap.to(closeIcon, { opacity:1, rotate:0, duration:0.3 });
+    gsap.to(hamburger, { opacity: 0, rotate: 90, duration: 0.3 });
+    gsap.to(closeIcon, { opacity: 1, rotate: 0, duration: 0.3 });
     open = true;
   } else {
     tl.reverse();
-    gsap.to(hamburger, { opacity:1, rotate:0, duration:0.3 });
-    gsap.to(closeIcon, { opacity:0, rotate:-90, duration:0.3 });
+    gsap.to(hamburger, { opacity: 1, rotate: 0, duration: 0.3 });
+    gsap.to(closeIcon, { opacity: 0, rotate: -90, duration: 0.3 });
     open = false;
   }
 });
